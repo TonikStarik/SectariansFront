@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "cwd": "babelrc",
+        "root": [
+          "index.js"
+        ],
+        "extensions": [
+          ".js",
+          ".ios.js",
+          ".android.js"
+        ],
+        "alias": {
+          "@assets": "./src/assets",
+          "@constants": "./src/constants",
+          "@modules": "./src/modules",
+          "@pages": "./src/pages",
+          "@store": "./src/store"
+        }
+      }
+    ]
+  ]
+}
