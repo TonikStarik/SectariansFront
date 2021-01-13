@@ -1,22 +1,13 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@assets": [
-        "src/assets/*",
-      ],
-      "@constants": [
-        "src/constants/*"
-      ],
-      "@modules": [
-        "src/modules/*"
-      ],
-      "@pages": [
-        "src/pages/*"
-      ],
-      "@store": [
-        "src/store/*"
-      ]
-    }
-  }
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@assets": ["src/assets/*"],
+			"@common": ["src/common/*"],
+			"@constants": ["src/constants/*"],
+			"@modules": ["src/modules/*"],
+			"@pages": ["src/pages/*"],
+			"@store": ["src/store/*"]
+		}
+	}
 }
