@@ -2,15 +2,19 @@ import React from 'react';
 
 import {
   Button,
+  ImageBackground,
   ScrollView,
   Text,
   View,
 } from 'react-native';
 
-import LogoIcon from '@common/Icons/LogoIcon';
+import forestBackground from '@assets/icons/forest.png';
+
+import GreetingIcon from '@common/Icons/GreetingIcon';
+
+import styles from '@modules/Greeting/styles';
 
 const Greeting = ({ navigation }) => {
-  console.log(navigation)
   const onPressSignIn = () => {
     navigation.navigate('SignIn');
   };
@@ -20,21 +24,31 @@ const Greeting = ({ navigation }) => {
   };
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'green' }}>
-      <ScrollView>
-        <LogoIcon />
+    <ImageBackground source={forestBackground} style={styles.greetingBackgroundImage}>
+      <View style={styles.greetingPage}>
+        <ScrollView contentContainerStyle={styles.greetingScroll}>
+          <View style={styles.greetingLogoWrapper}>
+            <GreetingIcon style={styles.greetingLogoImage} />
+          </View>
 
-        <View>
-          <Text>Welcome</Text>
+          <View style={styles.hintWrapper}>
+            <Text style={styles.hintTitle}>Welcome</Text>
 
-          <Text>Do meditation. Stay focused. Live a healthy life.</Text>
-        </View>
+            <Text style={styles.hintText}>Do meditation. Stay focused. Live a healthy life.</Text>
+          </View>
 
-        <Button onPress={onPressSignIn} title="Login With Email" />
+          <Button style={styles.loginBtn} onPress={onPressSignIn} title="Login With Email" />
 
-        <Text>Don't have an account? <Button onPress={onPressSignUp} title="Sign Up" /></Text>
-      </ScrollView>
-    </View>
+          <Text style={styles.offerRegister}>
+            Don't have an account?
+
+          <Text style={styles.registerBtn} onPress={onPressSignUp}>
+              Sign Up
+          </Text>
+          </Text>
+        </ScrollView>
+      </View>
+    </ImageBackground>
   );
 };
 

@@ -30,6 +30,7 @@ const leftSideAnimation = {
 const LandingPage = () => {
   return (
     <Stack.Navigator
+      cardStyle={{ flex: 1, margin: 0 }}
       initialRouteName='Greeting'
       headerMode={false}
     >
