@@ -1,6 +1,8 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 import colors from '@assets/colors';
+
+const width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
   greetingBackgroundImage: {
@@ -28,15 +30,55 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  greetingLogoImage: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   hintWrapper: {
+    alignItems: 'center',
+    marginTop: 32,
+  },
+  hintTitle: {
+    fontFamily: 'Alegreya',
+    fontSize: 34,
+    fontWeight: 'bold',
+    color: colors.white,
+    marginBottom: 5
+  },
+  hintText: {
+    fontFamily: 'Alegreya Sans',
+    fontSize: 20,
+    color: colors.white,
+    textAlign: 'center',
+    width: width * 0.75,
+  },
+  emptyBlock: {
+    flex: 1,
+  },
+  formWrapper: {
+    flex: 2,
+    alignItems: 'center',
+  },
+  btnControllWrapper: {
+    flex: 1,
+  },
+  offerRegister: {
+    color: colors.white,
+    marginTop: 15,
+    textAlign: 'center',
+  },
+  registerBtn: {
+    fontWeight: 'bold',
+  },
+  loginBtn: {
+    backgroundColor: colors.grannySmith,
+    height: 61,
+    width: width * 0.85,
+    borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    color: colors.white,
+    fontWeight: '500',
   },
+  loginText: {
+    color: colors.white,
+    fontSize: 25,
+  }
 });
 
 export default styles;
