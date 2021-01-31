@@ -2,9 +2,11 @@ import React from 'react';
 
 import { TouchableHighlight, Text } from 'react-native';
 
+import styles from '@common/Button/styles';
+
 const Button = ({ text: btnText, onPressHandler }) => (
   <TouchableHighlight
-    // style={styles.submit}
+    style={styles.buttonStyle}
     onPress={onPressHandler}
     underlayColor='#fff'
   >

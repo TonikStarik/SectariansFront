@@ -61,6 +61,7 @@ module.exports = {
           '@assets': './src/assets',
           '@common': './src/common',
           '@constants': './src/constants',
+          '@layouts': './src/layouts',
           '@modules': './src/modules',
           '@pages': './src/pages',
           '@store': './src/store',

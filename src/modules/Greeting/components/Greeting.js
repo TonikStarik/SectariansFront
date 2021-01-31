@@ -46,7 +46,7 @@ const Greeting = ({ navigation }) => {
               activeOpacity={0.8}
               underlayColor="#DDDDDD"
               style={styles.loginBtn}
-              onPress={onPressSignIn}
+              onPressOut={onPressSignIn}
             >
               <Text style={styles.loginText}>Login With Email</Text>
             </TouchableHighlight>

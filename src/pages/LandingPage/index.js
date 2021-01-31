@@ -3,8 +3,8 @@ import React from 'react';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 
 import Greeting from '@modules/Greeting/components/Greeting';
-import SignIn from '@modules/SignIn/components/SignIn';
-import SignUp from '@modules/SignUp/components/SignUp';
+import SignIn from '@modules/SignIn/components';
+import SignUp from '@modules/SignUp/components';
 
 const Stack = createStackNavigator();
 
